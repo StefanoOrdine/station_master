@@ -36,11 +36,11 @@ describe StationMaster::Ask::Station do
     end
   end
 
-  context "#search_by_city" do
-    let(:found_stations) { StationMaster::Ask::Station.search_by_city('Tor') }
+  context "#find_by_city" do
+    let(:found_stations) { StationMaster::Ask::Station.find_by_city('Tor') }
 
     it "returns stations that match with city name" do
-      expect(station).to respond_to(:search_by_city)
+      expect(station).to respond_to(:find_by_city)
       expect(found_stations).to be_a(Hash)
       expect(found_stations).not_to be_empty
       expect(found_stations.values.count).to eq(35)

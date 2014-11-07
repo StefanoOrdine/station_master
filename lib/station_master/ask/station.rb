@@ -29,7 +29,7 @@ module StationMaster
           stations_array
         end
 
-        def search_by_city(city)
+        def find_by_city(city)
           remote_call(:search, { city: city }).split(/\n/).map(&:strip).inject({}) { |hash, entry| hash.merge!({ entry.split('|').first.to_sym => entry.split('|').last }) }
         end
 

@@ -34,7 +34,7 @@ require minutes!).
 
 To find a specific station based on city name:
 
-  StationMaster::Ask::Station.search_by_city('Torino')
+  StationMaster::Ask::Station.find_by_city('Torino')
 
 It returns a list of possible stations that match the parameter string.
 
