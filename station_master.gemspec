@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = StationMaster::VERSION
   spec.authors       = ["Stefano Ordine"]
   spec.email         = ["stefano.ordine@gmail.com"]
-  spec.summary       = "This gem provide an interface to an api from viaggiatreno.it public site."
-  spec.description   = "This gem provide an interface to an api from viaggiatreno.it public site. This project exploits the api that the site uses to build up the front-end side, to retrieve real-time information on italian rail system and to provide an more convinient interface to that information."
+  spec.summary       = "This gem provide an interface to an api from www.viaggiatreno.it public site."
+  spec.description   = "This gem provide an interface to an api from www.viaggiatreno.it public site. This project exploits the api that the site uses to build up the front-end side, to retrieve real-time information on italian rail system and to provide an more convinient interface to that information."
   spec.homepage      = ""
   spec.license       = "MIT"
 

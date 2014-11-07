@@ -1,6 +1,6 @@
 # StationMaster
 
-This gem provide an interface to an api from viaggiatreno.it public site.
+This gem provide an interface to an api from www.viaggiatreno.it public site.
 This project exploits the api that the site uses to build up the front-end side,
 to retrieve real-time information on italian rail system and to provide an more
 convinient interface to that information.
@@ -9,11 +9,11 @@ convinient interface to that information.
 
 Add this line to your application's Gemfile:
 
-    gem 'station_master'
+  gem 'station_master'
 
 And then execute:
 
-    $ bundle install
+  $ bundle install
 
 Or install it yourself as:
 
@@ -21,12 +21,12 @@ Or install it yourself as:
 
 ## Usage
 
-`require 'station_master'`
+  require 'station_master'
 
 To get a list of all stations available:
 
 
-`StationMaster::Ask::Station.all`
+  StationMaster::Ask::Station.all
 
 
 It returns the list of all stations with geo-coordinates information (may
@@ -34,7 +34,7 @@ require minutes!).
 
 To find a specific station based on city name:
 
-`StationMaster::Ask::Station.search_by_city('Torino')`
+  StationMaster::Ask::Station.search_by_city('Torino')
 
 It returns a list of possible stations that match the parameter string.
 

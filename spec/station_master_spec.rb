@@ -13,21 +13,21 @@ describe StationMaster::Ask::Station do
       expect(all_stations.count).to eq(3)
       expect(all_stations).to eq([
         {
-          station_id: "S11212",
+          station_code: "S11212",
           latitude: 40.787682,
           longitude: 15.758093,
           region_id: "15",
           location: "Castel Lagopesole"
         },
         {
-          station_id: "S11214",
+          station_code: "S11214",
           latitude: 40.714667,
           longitude: 15.785619,
           region_id: "15",
           location: "Avigliano Lucania"
         },
         {
-          station_id: "S11219",
+          station_code: "S11219",
           latitude: 41.062304,
           longitude: 15.595094,
           region_id: "15",
