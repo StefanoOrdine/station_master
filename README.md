@@ -40,16 +40,16 @@ It returns a list of possible stations that match the parameter string.
 
 ## Changelog
 
-# 0.0.3
+### 0.0.3
 
 - Retrieve station codes by providing city name.
 
-# 0.0.2
+### 0.0.2
 
 - Setup test environment.
 - Mocking api in test environment.
 
-# 0.0.1
+### 0.0.1
 
 - Retrieve the list of all stations.
 - gem bundlerized.
