@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe StationMaster::Ask::Station do
-  let(:station) { StationMaster::Ask::Station }
+describe StationMaster::Station do
+  let(:station) { StationMaster::Station }
 
   context "#all" do
-    let(:all_stations) { StationMaster::Ask::Station.all }
+    let(:all_stations) { StationMaster::Station.all }
 
     it "returns all stations" do
       expect(station).to respond_to(:all)
@@ -37,7 +37,7 @@ describe StationMaster::Ask::Station do
   end
 
   context "#find_by_city" do
-    let(:found_stations) { StationMaster::Ask::Station.find_by_city('Tor') }
+    let(:found_stations) { StationMaster::Station.find_by_city('Tor') }
 
     it "returns stations that match with city name" do
       expect(station).to respond_to(:find_by_city)

@@ -1,6 +1,6 @@
 module StationMaster
-  module Ask
-    class Departure
+  class Departure
+    class << self
       
     end
   end
