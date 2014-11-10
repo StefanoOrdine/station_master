@@ -40,6 +40,10 @@ It returns a list of possible stations that match the parameter string.
 
 ## Changelog
 
+### 0.0.4
+
+- Fix dependencies.
+
 ### 0.0.3
 
 - Retrieve station codes by providing city name.
