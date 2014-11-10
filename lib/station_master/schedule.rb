@@ -41,7 +41,7 @@ module StationMaster
         @train_code = hash[:numeroTreno]
         @train_type = hash[:categoria]
         @origin = hash[:origine]
-        @platform = Integer(hash[:binarioProgrammatoArrivoDescrizione] || 0)
+        @platform = (hash[:binarioProgrammatoArrivoDescrizione]|| '0').chomp
         @time = Time.at((hash[:orarioArrivo] || 0) / 1000)
       end
 
@@ -63,7 +63,7 @@ module StationMaster
         @train_code = hash[:numeroTreno]
         @train_type = hash[:categoria]
         @destination = hash[:destinazione]
-        @platform = Integer(hash[:binarioProgrammatoPartenzaDescrizione] || 0)
+        @platform = (hash[:binarioProgrammatoPartenzaDescrizione] || 0).strip
         @time = Time.at((hash[:orarioPartenza] || 0) / 1000)
       end
 
