@@ -1,7 +1,8 @@
 module StationMaster
   class Station
+    attr_reader :station_code, :latitude, :longitude, :region_id, :location
+
     class << self
-      
       include Ask
 
       def all
@@ -16,13 +17,7 @@ module StationMaster
             station_details = find_details(station_code, region_id)
             location = (station_details[:localita][:nomeLungo] || '').split.map(&:capitalize).join(' ') if station_details
 
-            array << {
-              station_code: station_code,
-              latitude: latitude,
-              longitude: longitude,
-              region_id: region_id,
-              location: location
-            }
+            array << Station.new(station_code, latitude, longitude, region_id, location)
           end
           stations_array += response
           index += 1
@@ -58,8 +53,26 @@ module StationMaster
               nil
           end
 
-          remote_call!(request_url) if request_url
+          ask!(request_url) if request_url
         end
+    end
+
+    def initialize(station_code, latitude, longitude, region_id, location)
+      @station_code = station_code
+      @latitude = latitude
+      @longitude = longitude
+      @region_id = region_id
+      @location = location
+    end
+
+    def to_hash
+      {
+        station_code: station_code,
+        latitude: latitude,
+        longitude: longitude,
+        region_id: region_id,
+        location: location
+      }
     end
   end
 end

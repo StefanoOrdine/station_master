@@ -1,7 +1,7 @@
 module StationMaster
   module Ask
     protected
-      def remote_call!(request_url)
+      def ask!(request_url)
         url = URI.parse(request_url)
         http = Net::HTTP.new(url.host, url.port)
         http.read_timeout = 2
