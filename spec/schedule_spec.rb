@@ -3,10 +3,10 @@ require 'spec_helper'
 describe StationMaster::Schedule do
   let(:schedule) { StationMaster::Schedule }
 
-  context "#find_arrivals" do
+  context "#find_station_arrivals" do
     it "returns arrivals given a station code and optionally a datetime" do
-      expect(schedule).to respond_to(:find_arrivals)
-      expect(schedule.find_arrivals('S00219', Time.new(2014,11,10,22,35,26,'+01:00')).map(&:to_hash)).to eq([
+      expect(schedule).to respond_to(:find_station_arrivals)
+      expect(schedule.find_station_arrivals('S00219', Time.new(2014,11,10,22,35,26,'+01:00')).map(&:to_hash)).to eq([
         {
           origin: "SUSA",
           platform: 14,
@@ -109,10 +109,10 @@ describe StationMaster::Schedule do
     end
   end
 
-  context "#find_departures" do
+  context "#find_station_departures" do
     it "returns departures given a station code and optionally a datetime" do
-      expect(schedule).to respond_to(:find_departures)
-      expect(schedule.find_departures('S00219', Time.new(2014,11,10,22,18,44,'+01:00')).map(&:to_hash)).to eq([
+      expect(schedule).to respond_to(:find_station_departures)
+      expect(schedule.find_station_departures('S00219', Time.new(2014,11,10,22,18,44,'+01:00')).map(&:to_hash)).to eq([
         {
           train_code: 10030,
           train_type: "REG",

@@ -3,13 +3,13 @@ module StationMaster
     class << self
       include Ask
 
-      def find_arrivals(station_code, time = Time.now)
+      def find_station_arrivals(station_code, time = Time.now)
         MultiJson::load(remote_call(:arrivals, { station_code: station_code, time: format_time(time) }), symbolize_keys: true).inject([]) do |array, arrival_hash|
           array << Arrival.new(arrival_hash)
         end
       end
 
-      def find_departures(station_code, time = Time.now)
+      def find_station_departures(station_code, time = Time.now)
         MultiJson::load(remote_call(:departures, { station_code: station_code, time: format_time(time) }), symbolize_keys: true).inject([]) do |array, arrival_hash|
           array << Departure.new(arrival_hash)
         end
@@ -41,7 +41,7 @@ module StationMaster
         @train_code = hash[:numeroTreno]
         @train_type = hash[:categoria]
         @origin = hash[:origine]
-        @platform = (hash[:binarioProgrammatoArrivoDescrizione]|| '0').chomp
+        @platform = (hash[:binarioProgrammatoArrivoDescrizione]|| '0').strip
         @time = Time.at((hash[:orarioArrivo] || 0) / 1000)
       end
 

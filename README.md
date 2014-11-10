@@ -23,20 +23,31 @@ Or install it yourself as:
 
     require 'station_master'
 
+To find a specific station based on city name:
+
+    StationMaster::Station.find_by_city('Torino')
+
+It returns a list of possible stations that match the parameter string.
+
+To find real-time departures information:
+
+    StationMaster::Schedule.find_station_departures('S06421')
+
+It retrieve the current station departures status.
+
+To find real-time arrivals information:
+
+    StationMaster::Schedule.find_station_arrivals('S06421')
+
+It retrieve the current station arrivals status.
+
 To get a list of all stations available:
 
-
-    StationMaster::Ask::Station.all
+    StationMaster::Station.all
 
 
 It returns the list of all stations with geo-coordinates information (may
 require minutes!).
-
-To find a specific station based on city name:
-
-    StationMaster::Ask::Station.find_by_city('Torino')
-
-It returns a list of possible stations that match the parameter string.
 
 ## Changelog
 
