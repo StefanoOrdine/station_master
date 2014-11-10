@@ -53,7 +53,7 @@ module StationMaster
               nil
           end
 
-          remote_call!(request_url) if request_url
+          ask!(request_url) if request_url
         end
     end
 
