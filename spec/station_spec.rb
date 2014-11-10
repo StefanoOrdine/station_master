@@ -11,7 +11,7 @@ describe StationMaster::Station do
       expect(all_stations).to be_a(Array)
       expect(all_stations).not_to be_empty
       expect(all_stations.count).to eq(3)
-      expect(all_stations).to eq([
+      expect(all_stations.map(&:to_hash)).to eq([
         {
           station_code: "S11212",
           latitude: 40.787682,
