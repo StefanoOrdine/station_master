@@ -51,6 +51,14 @@ require minutes!).
 
 ## Changelog
 
+### 0.0.6
+
+- Add arrivals schedule to station_master.
+
+### 0.0.5
+
+- Add departures schedule to station_master.
+
 ### 0.0.4
 
 - Fix dependencies.
