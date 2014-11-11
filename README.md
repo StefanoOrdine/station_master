@@ -51,7 +51,7 @@ require minutes!).
 
 ## Changelog
 
-### NEXT RELEASE
+### 0.0.7
 
 - Add delay information to schedule arrivals and departures.
 
