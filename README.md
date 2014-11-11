@@ -51,6 +51,10 @@ require minutes!).
 
 ## Changelog
 
+### 0.0.7
+
+- Add delay information to schedule arrivals and departures.
+
 ### 0.0.6
 
 - Add arrivals schedule to station_master.
