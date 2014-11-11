@@ -35,7 +35,7 @@ module StationMaster
     end
 
     class Arrival
-      attr_reader :train_code, :train_type, :origin, :platform, :time
+      attr_reader :train_code, :train_type, :origin, :platform, :time, :delay
 
       def initialize(hash)
         @train_code = hash[:numeroTreno]
@@ -43,6 +43,7 @@ module StationMaster
         @origin = hash[:origine]
         @platform = (hash[:binarioProgrammatoArrivoDescrizione]|| '0').strip
         @time = Time.at((hash[:orarioArrivo] || 0) / 1000)
+        @delay = hash[:ritardo]
       end
 
       def to_hash
@@ -51,13 +52,14 @@ module StationMaster
           train_type: train_type,
           origin: origin,
           platform: platform,
-          time: time.strftime('%H:%M')
+          time: time.strftime('%H:%M'),
+          delay: delay
         }
       end
     end
 
     class Departure
-      attr_reader :train_code, :train_type, :destination, :platform, :time
+      attr_reader :train_code, :train_type, :destination, :platform, :time, :delay
 
       def initialize(hash)
         @train_code = hash[:numeroTreno]
@@ -65,6 +67,7 @@ module StationMaster
         @destination = hash[:destinazione]
         @platform = (hash[:binarioProgrammatoPartenzaDescrizione] || 0).strip
         @time = Time.at((hash[:orarioPartenza] || 0) / 1000)
+        @delay = hash[:ritardo]
       end
 
       def to_hash
@@ -73,7 +76,8 @@ module StationMaster
           train_type: train_type,
           destination: destination,
           platform: platform,
-          time: time.strftime('%H:%M')
+          time: time.strftime('%H:%M'),
+          delay: delay
         }
       end
     end
