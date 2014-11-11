@@ -26,7 +26,7 @@ module StationMaster
               nil
           end
 
-          ask!(URI.escape(request_url)) if request_url
+          ask!(request_url) if request_url
         end
 
         def format_time(time)
