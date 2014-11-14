@@ -51,6 +51,10 @@ require minutes!).
 
 ## Changelog
 
+### 0.0.8
+
+- Bug fix arrivals and departures initializers.
+
 ### 0.0.7
 
 - Add delay information to schedule arrivals and departures.
