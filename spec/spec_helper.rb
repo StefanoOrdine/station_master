@@ -9,6 +9,9 @@ include WebMock::API
 require 'benchmark'
 
 RSpec.configure do |config|
+  config.filter_run :focus => true
+  config.run_all_when_everything_filtered = true
+  
   # stubs for Station.all
   config.before(:each) do
     stub_request(:get, 'http://www.viaggiatreno.it/viaggiatrenonew/resteasy/viaggiatreno/elencoStazioni/0').
