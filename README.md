@@ -51,6 +51,10 @@ require minutes!).
 
 ## Changelog
 
+### 0.0.9
+
+- Refactor code, better code organization.
+
 ### 0.0.8
 
 - Bug fix arrivals and departures initializers.

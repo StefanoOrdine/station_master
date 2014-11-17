@@ -8,115 +8,115 @@ describe StationMaster::Schedule do
       expect(schedule).to respond_to(:find_station_arrivals)
       expect(schedule.find_station_arrivals('S00219', Time.new(2014,11,10,22,35,26,'+01:00')).map(&:to_hash)).to eq([
         {
+          train_code: 24875,
+          train_type: "REG",
           origin: "SUSA",
           platform: "14",
           time: "22:15",
-          train_code: 24875,
-          train_type: "REG",
           delay: 0
         },
         {
+          train_code: 2530,
+          train_type: "REG",
           origin: "GENOVA BRIGNOLE",
           platform: "7",
           time: "22:30",
-          train_code: 2530,
-          train_type: "REG",
           delay: 7
         },
         {
+          train_code: 24832,
+          train_type: "REG",
           origin: "IVREA",
           platform: "18",
           time: "22:32",
-          train_code: 24832,
-          train_type: "REG",
           delay: 0
         },
         {
+          train_code: 10216,
+          train_type: "REG",
           origin: "CUNEO",
           platform: "3",
           time: "22:35",
-          train_code: 10216,
-          train_type: "REG",
           delay: 0
         },
         {
+          train_code: 9580,
+          train_type: "ES*",
           origin: "ROMA TERMINI",
           platform: "17",
           time: "22:40",
-          train_code: 9580,
-          train_type: "ES*",
           delay: 6
         },
         {
+          train_code: 10029,
+          train_type: "REG",
           origin: "BARDONECCHIA",
           platform: "15",
           time: "22:45",
-          train_code: 10029,
-          train_type: "REG",
           delay: 0
         },
         {
+          train_code: 9746,
+          train_type: "ES*",
           origin: "VENEZIA SANTA LUCIA",
           platform: "11",
           time: "22:50",
-          train_code: 9746,
-          train_type: "ES*",
           delay: 17
         },
         {
+          train_code: 2030,
+          train_type: "REG",
           origin: "MILANO CENTRALE",
           platform: "13",
           time: "23:07",
-          train_code: 2030,
-          train_type: "REG",
           delay: 0
         },
         {
+          train_code: 9654,
+          train_type: "ES*",
           origin: "ROMA TERMINI",
           platform: "16",
           time: "23:12",
-          train_code: 9654,
-          train_type: "ES*",
           delay: 8
         },
         {
+          train_code: 24877,
+          train_type: "REG",
           origin: "SUSA",
           platform: "4",
           time: "23:17",
-          train_code: 24877,
-          train_type: "REG",
           delay: 0
         },
         {
-          origin: "SAVONA",
-          platform: "0",
-          time: "23:35",
           train_code: 33800,
           train_type: "REG",
+          origin: "SAVONA",
+          platform: "",
+          time: "23:35",
           delay: 0
         },
         {
+          train_code: 2532,
+          train_type: "REG",
           origin: "GENOVA BRIGNOLE",
           platform: "5",
           time: "23:40",
-          train_code: 2532,
-          train_type: "REG",
           delay: 0
         },
         {
+          train_code: 10031,
+          train_type: "REG",
           origin: "BARDONECCHIA",
           platform: "15",
           time: "23:45",
-          train_code: 10031,
-          train_type: "REG",
           delay: 0
         },
         {
+          train_code: 2032,
+          train_type: "REG",
           origin: "MILANO CENTRALE",
           platform: "13",
           time: "00:10",
-          train_code: 2032,
-          train_type: "REG",
           delay: 0
         }
       ])
