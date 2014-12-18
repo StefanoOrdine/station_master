@@ -51,6 +51,10 @@ require minutes!).
 
 ## Changelog
 
+### 0.0.12
+
+- OMG these dependencies!
+
 ### 0.0.11
 
 - Fix gem dependencies.
