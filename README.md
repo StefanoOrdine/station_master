@@ -51,6 +51,14 @@ require minutes!).
 
 ## Changelog
 
+### 0.0.11
+
+- Fix gem dependencies.
+
+### 0.0.10
+
+- Move gem dependencies in gemspec.
+
 ### 0.0.9
 
 - Refactor code, better code organization.
