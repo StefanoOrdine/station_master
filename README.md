@@ -51,6 +51,10 @@ require minutes!).
 
 ## Changelog
 
+### 0.1.1
+
+- Fix time zone for api requests, update active_support gem.
+
 ### 0.1.0
 
 - Add time zone.
