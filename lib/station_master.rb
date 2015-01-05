@@ -9,4 +9,5 @@ require 'station_master/version'
 
 module StationMaster
   STATION_MASTER_BASE_URL = 'http://www.viaggiatreno.it/viaggiatrenonew/resteasy/viaggiatreno/'
+  TIME_ZONE = 'Rome'
 end
