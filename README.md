@@ -51,6 +51,10 @@ require minutes!).
 
 ## Changelog
 
+### 0.1.0
+
+- Add time zone.
+
 ### 0.0.12
 
 - OMG these dependencies!
