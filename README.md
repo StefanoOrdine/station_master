@@ -51,6 +51,10 @@ require minutes!).
 
 ## Changelog
 
+### 0.1.3
+
+- Fix definitely localization.
+
 ### 0.1.2
 
 - Update ruby version
