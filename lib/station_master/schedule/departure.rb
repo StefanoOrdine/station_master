@@ -8,7 +8,7 @@ module StationMaster
         @train_type = hash[:categoria]
         @destination = hash[:destinazione]
         @platform = (hash[:binarioProgrammatoPartenzaDescrizione].to_s || '0').strip
-        @time = Time.at((hash[:orarioPartenza] || 0) / 1000)
+        @time = Time.at((hash[:orarioPartenza] || 0) / 1000).in_time_zone(TIME_ZONE)
         @delay = hash[:ritardo]
       end
 
